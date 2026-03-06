@@ -15,8 +15,8 @@ WORKDIR /app
 ENV PORT=8080
 
 # Procfile reference:
-# web: java -jar target/shantifanrender-0.0.1-SNAPSHOT.jar
-COPY --from=build /workspace/target/shantifanrender-0.0.1-SNAPSHOT.jar /app/app.jar
+# web: java -jar target/*-SNAPSHOT.jar
+COPY --from=build /workspace/target/*-SNAPSHOT.jar /app/app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/app.jar --server.port=${PORT:-8080}"]

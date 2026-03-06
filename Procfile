@@ -1,1 +1,1 @@
-web: java -jar target/shantifanrender-0.0.1-SNAPSHOT.jar
+web: java -jar target/*-SNAPSHOT.jar
